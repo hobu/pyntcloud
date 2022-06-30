@@ -203,7 +203,7 @@ class VoxelGrid(Structure):
         elif mode == "TDF":
             # truncation = np.linalg.norm(self.shape)
             kdt = cKDTree(self._points)
-            vector, i = kdt.query(self.voxel_centers, n_jobs=-1)
+            vector, i = kdt.query(self.voxel_centers, workers=-1)
 
         elif mode.endswith("_max"):
             if not is_numba_avaliable:

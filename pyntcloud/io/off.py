@@ -8,7 +8,7 @@ def read_off(filename):
 
         first_line = off.readline()
         if "OFF" not in first_line:
-            raise ValueError('The file does not start whith the word OFF')
+            raise ValueError('The file does not start with the word OFF')
         color = True if "C" in first_line else False
 
         count = 1
